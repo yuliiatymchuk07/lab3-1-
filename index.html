@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристична компанія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Туристична компанія "Подорожуй з нами"</h1>
+        <nav>
+            <ul>
+                <li><button><a href="#">Меню</a></button>
+                    <ul class="submenu">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="survey.html">Опитувальник</a></li>
+                        <li><a href="news.html">Новини</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
+                    </ul>
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Пошук...">
+                        <button type="submit" id="search-button">🔍</button>
+                    </form>
+                </li>
+               
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Вітаємо у <em>нашій туристичній компанії</em>!</h2>
+            <p>Ми пропонуємо <rem>унікальні тури</rem> по найкрасивіших місцях світу.</p>
+            <div class="image-hover">
+                <p class="hover-text">Зображення</p>
+                <img src="image-61.png" alt="Example image" class="hover-image">
+            </div>
+        </section>
+
+        <section>
+            <h2>Наші послуги</h2>
+            <ul>
+                <li>Екскурсії по місту</li>
+                <li>Відпочинок на морі</li>
+                <li>Гірськолижні курорти</li>
+                <li>Круїзи по ріках</li>
+            </ul>
+        </section>
+    </main>
+
+    <button id="button-top" onclick="scrollToTop()">UP</button>
+
+    <footer>
+        <p>&copy; 2024 Туристична компанія "Подорожуй з нами". Усі права захищені.</p>
+    </footer>
+
+    <script>
+        let btn = document.getElementById("button-top");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+function scrollToTop(){
+    window.scrollTo({top: 0, behavior: 'smooth'})
+}
+    </script>
+</body>
+</html>
